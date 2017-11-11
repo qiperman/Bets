@@ -1,0 +1,6 @@
+c:\users\администратор\documents\visual studio 2013\Projects\BetsClient\BetsClient\bin\Debug\BetsClient.exe.config
+c:\users\администратор\documents\visual studio 2013\Projects\BetsClient\BetsClient\bin\Debug\BetsClient.exe
+c:\users\администратор\documents\visual studio 2013\Projects\BetsClient\BetsClient\bin\Debug\BetsClient.pdb
+c:\users\администратор\documents\visual studio 2013\Projects\BetsClient\BetsClient\obj\Debug\BetsClient.csprojResolveAssemblyReference.cache
+c:\users\администратор\documents\visual studio 2013\Projects\BetsClient\BetsClient\obj\Debug\BetsClient.exe
+c:\users\администратор\documents\visual studio 2013\Projects\BetsClient\BetsClient\obj\Debug\BetsClient.pdb

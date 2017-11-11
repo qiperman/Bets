@@ -1,0 +1,6 @@
+c:\users\администратор\documents\visual studio 2013\Projects\BetsServer\BetsServer\obj\Debug\BetsServer.csprojResolveAssemblyReference.cache
+C:\Users\Администратор\Documents\Visual Studio 2013\Projects\BetsServer\BetsServer\bin\BetsServer.dll.config
+C:\Users\Администратор\Documents\Visual Studio 2013\Projects\BetsServer\BetsServer\bin\BetsServer.dll
+C:\Users\Администратор\Documents\Visual Studio 2013\Projects\BetsServer\BetsServer\bin\BetsServer.pdb
+C:\Users\Администратор\Documents\Visual Studio 2013\Projects\BetsServer\BetsServer\obj\Debug\BetsServer.dll
+C:\Users\Администратор\Documents\Visual Studio 2013\Projects\BetsServer\BetsServer\obj\Debug\BetsServer.pdb

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MainService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:7837/MainService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7837/MainService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7837/MainService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BetsServer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMainService_TestConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_TestConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccount" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Deposit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deposit" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Deposit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Withdraw_InputMessage">
+    <wsdl:part name="parameters" element="tns:Withdraw" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_Withdraw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WithdrawResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_MakeBet_InputMessage">
+    <wsdl:part name="parameters" element="tns:MakeBet" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_MakeBet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MakeBetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetBets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBets" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetBets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBetsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetBet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBet" />
+  </wsdl:message>
+  <wsdl:message name="IMainService_GetBet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMainService">
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/TestConnection" message="tns:IMainService_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/TestConnectionResponse" message="tns:IMainService_TestConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetAccount" message="tns:IMainService_GetAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetAccountResponse" message="tns:IMainService_GetAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deposit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/Deposit" message="tns:IMainService_Deposit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/DepositResponse" message="tns:IMainService_Deposit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Withdraw">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/Withdraw" message="tns:IMainService_Withdraw_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/WithdrawResponse" message="tns:IMainService_Withdraw_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MakeBet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/MakeBet" message="tns:IMainService_MakeBet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/MakeBetResponse" message="tns:IMainService_MakeBet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBets">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetBets" message="tns:IMainService_GetBets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetBetsResponse" message="tns:IMainService_GetBets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetEvents" message="tns:IMainService_GetEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetEventsResponse" message="tns:IMainService_GetEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMainService/GetBet" message="tns:IMainService_GetBet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMainService/GetBetResponse" message="tns:IMainService_GetBet_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMainService" type="tns:IMainService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/IMainService/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccount">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deposit">
+      <soap:operation soapAction="http://tempuri.org/IMainService/Deposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Withdraw">
+      <soap:operation soapAction="http://tempuri.org/IMainService/Withdraw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakeBet">
+      <soap:operation soapAction="http://tempuri.org/IMainService/MakeBet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBets">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetBets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBet">
+      <soap:operation soapAction="http://tempuri.org/IMainService/GetBet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MainService">
+    <wsdl:port name="BasicHttpBinding_IMainService" binding="tns:BasicHttpBinding_IMainService">
+      <soap:address location="http://localhost:7837/MainService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
